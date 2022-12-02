@@ -1,4 +1,4 @@
-(ns aoc.day-1.main
+(ns aoc.day-1
   (:require [clojure.java.io :as io]))
 
 (defn- safe-parse-int [str]
