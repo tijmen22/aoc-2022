@@ -16,11 +16,11 @@
 (defn- items [lines]
   (->>
    (map #(into [] %) lines)
-   (map #(split-at (/ (count %) 2) %))))
+   (partition 3)))
 
-(defn- common-items [compartments]
+(defn- common-items [items]
   (->>
-   (map set compartments)
+   (map set items)
    (apply set/intersection)))
 
 (comment
