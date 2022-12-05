@@ -29,7 +29,7 @@
   (let [[moving remainder] (split-at qty (get crates (dec from)))]
     (->
      (assoc crates (dec from) remainder)
-     (assoc (dec to) (concat (reverse moving) (get crates (dec to)))))))
+     (assoc (dec to) (concat moving (get crates (dec to)))))))
 
 (comment
   (reduce move TEST-CRATES TEST-INSTRUCTIONS)
