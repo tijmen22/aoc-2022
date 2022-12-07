@@ -4,8 +4,8 @@
 
   (let [stream (slurp  "resources/day_6/input.csv")]
     (loop [i 0]
-      (if (= (count (set (subs stream i (+ i 4)))) 4)
-        (+ i 4)
+      (if (= (count (set (subs stream i (+ i 14)))) 14)
+        (+ i 14)
         (recur (inc i)))))
 
 
